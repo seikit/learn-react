@@ -3,7 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import { menuLinks } from "./MenuLinks";
+import { menuLinks } from "./MenuLinks/MenuLinks";
 import { Fragment } from "react";
 
 const SideBar = (props) => {

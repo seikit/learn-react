@@ -1,9 +1,14 @@
 import './App.css';
-import {styled, createTheme, ThemeProvider} from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import MainNavigation from "./components/ui/MainNavigation";
+import { Routes, Route } from "react-router-dom";
+import Customers from "./pages/Customers";
+import Materials from "./pages/Materials";
+import Projects from "./pages/Projects";
+import Proposals from "./pages/Proposals";
 
 const mdTheme = createTheme({
     shape: {
@@ -26,8 +31,13 @@ function App() {
                 }}
             >
                 <Toolbar/>
-                <Container maxWidth="lg" sx={{mt: 4, mb: 4}}>
-                    // Render content here
+                <Container maxWidth="xl" sx={{mt: 4, mb: 4}} disableGutters={true}>
+                    <Routes>
+                        <Route path="/clientes" element={<Customers />} />
+                        <Route path="/materiais" element={<Materials />} />
+                        <Route path="/projetos" element={<Projects />} />
+                        <Route path="/propostas" element={<Proposals />} />
+                    </Routes>
                 </Container>
             </Box>
         </Box>
